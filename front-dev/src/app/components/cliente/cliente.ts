@@ -1,3 +1,5 @@
+import { Endereco } from './endereco';
+import { Telefone } from './telefone';
 
 export class Cliente {
     public id: number;
@@ -7,6 +9,8 @@ export class Cliente {
         public rg: string,
         public email: string,
         public prfissao: string,
-        public tipoCliente: string, 
+        public tipoCliente: string,
+        public endereco: Endereco,
+        public telefone: Telefone [], 
     ){}
 }
