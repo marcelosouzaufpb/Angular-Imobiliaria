@@ -4,32 +4,32 @@ export class Endereco {
         private _bairro: string,
         private _numero: string,
         private _cep: string,
-    ){} 
-    
-    public get rua() : string {
+    ) { }
+
+    public get rua(): string {
         return this._rua
     }
-    public get bairro() : string {
+    public get bairro(): string {
         return this._bairro
     }
-    public get numero() : string {
+    public get numero(): string {
         return this._numero
     }
-    public get cep() : string {
+    public get cep(): string {
         return this._cep
     }
-    
-    public set rua(v : string) {
+
+    public set rua(v: string) {
         this._rua = v;
     }
-    public set bairro(v : string) {
+    public set bairro(v: string) {
         this._bairro = v;
     }
-    public set numero(v : string) {
+    public set numero(v: string) {
         this._numero = v;
     }
-    public set cep(v : string) {
+    public set cep(v: string) {
         this._cep = v;
     }
-    
+
 }
