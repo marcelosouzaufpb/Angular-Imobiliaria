@@ -11,6 +11,6 @@ export class Cliente {
         public prfissao: string,
         public tipoCliente: string,
         public endereco: Endereco,
-        public telefone: Telefone [], 
+        public telefone: Telefone, 
     ){}
 }
