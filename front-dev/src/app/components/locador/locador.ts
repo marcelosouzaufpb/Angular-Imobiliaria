@@ -7,12 +7,12 @@ export class Locador extends Cliente {
         nome: string,
         rg: string,
         email: string,
-        prfissao: string,
+        profissao: string,
         tipoCliente: string,
         endereco: Endereco,
         telefone: Telefone,
         public cpf: string,
     ) {
-        super(nome, rg, email, prfissao, tipoCliente, endereco, telefone)
+        super(nome, rg, email, profissao, tipoCliente, endereco, telefone)
     }
 }
