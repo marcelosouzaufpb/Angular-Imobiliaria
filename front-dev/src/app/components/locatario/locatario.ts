@@ -10,10 +10,10 @@ export class Locador extends Cliente {
         profissao: string,
         tipoCliente: string,
         endereco: Endereco,
-        telefone: Telefone, 
+        telefone: Telefone,
         public cnpj: string,
-        
-    ){
+
+    ) {
         super(nome, rg, email, profissao, tipoCliente, endereco, telefone)
     }
 }
