@@ -13,4 +13,12 @@ export class ClienteService {
 
     constructor(private appService: AppService) {
     }
+
+    add(cliente: Cliente): Cliente {
+        if(!cliente.id){
+            cliente.id = ++this.lastId;
+        }
+        this.listaDeClientes.push(cliente);
+        return cliente;
+    }
 }
