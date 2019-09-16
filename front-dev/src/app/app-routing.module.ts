@@ -6,7 +6,7 @@ import { SidebarComponent } from './components/telas/sidebar/sidebar.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: '', component: SidebarComponent },
+  { path: 'sidebar', component: SidebarComponent },
 ];
 
 @NgModule({
