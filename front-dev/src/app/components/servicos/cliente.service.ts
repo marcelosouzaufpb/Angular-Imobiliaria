@@ -14,11 +14,17 @@ export class ClienteService {
     constructor(private appService: AppService) {
     }
 
+    //Função adicionar Cliente 
     add(cliente: Cliente): Cliente {
-        if(!cliente.id){
+        if (!cliente.id) {
             cliente.id = ++this.lastId;
         }
         this.listaDeClientes.push(cliente);
         return cliente;
+    }
+
+    //Função deletar Cliente 
+    delete(id: number){
+        this.listaDeClientes = this.listaDeClientes.filter(cliente => cliente.id !== id)
     }
 }
