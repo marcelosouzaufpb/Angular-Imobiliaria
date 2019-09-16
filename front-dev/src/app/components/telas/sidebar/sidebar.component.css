@@ -1,0 +1,71 @@
+body {
+    overflow-x: hidden;
+}
+
+/* Sidebar Styles */
+
+#viewport {
+    padding-left: 250px;
+}
+
+#sidebar {
+    z-index: 1;
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #ffffff;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+}
+
+#sidebar header {
+    background-image: url(../../../../assets/logo/logo-casa.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 85% 85%;
+    background-color: darkgreen;
+    height: 140px;
+    text-align: center;
+}
+
+#sidebar .list-group {
+    padding-top: 5%;
+}
+
+#sidebar #sidebar-nav-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+    color: #b4b4b4;
+}
+
+#sidebar .sidebar-item a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.5;
+    letter-spacing: normal;
+    text-align: left;
+    text-decoration: none;
+}
+
+#sidebar .list-group-item {
+    border: none;
+    text-decoration: none;
+}
+
+#sidebar .list-group-item a i {
+    margin-right: 8%;
+}
+
+
+
