@@ -4,13 +4,13 @@ import { Telefone } from './telefone';
 export class Cliente {
     public id: number;
 
-    constructor (
+    constructor(
         public nome: string,
         public rg: string,
         public email: string,
         public profissao: string,
         public tipoCliente: string,
         public endereco: Endereco,
-        public telefone: Telefone, 
-    ){}
+        public telefone: Telefone,
+    ) { }
 }
