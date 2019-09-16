@@ -1,6 +1,8 @@
 import { Injectable } from "@angular/core";
 import { AppService } from '../../app.service';
 import { Cliente } from '../cliente/cliente';
+import { LOCADORES } from '../cliente/mock-clientes';
+import { LOCATARIOS } from '../cliente/mock-clientes';
 
 @Injectable({
     providedIn: 'root'
@@ -12,6 +14,12 @@ export class ClienteService {
     listaDeClientes: Cliente[] = [];
 
     constructor(private appService: AppService) {
+        for(let cli of LOCADORES){
+            this.listaDeClientes.push(cli)
+        }
+        for(let cli of LOCATARIOS){
+            this.listaDeClientes.push(cli)
+        }
     }
 
     //Função adicionar Cliente 
