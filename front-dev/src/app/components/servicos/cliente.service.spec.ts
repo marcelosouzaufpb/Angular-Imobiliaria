@@ -8,10 +8,11 @@ import { Locador } from '../locador/locador';
 import { Locatario } from '../locatario/locatario';
 
 describe('BookService', () => {
-
+    // Criando atributos para os testes 
     const cliente1 = new Locador('Eduardo Pessoa', '', '', '', 'true', new Endereco('', '', '', ''), new Telefone('', ''), 'cpf');
     const cliente2 = new Locatario('Eduardo Carreira', '', '', '', 'false', new Endereco('', '', '', ''), new Telefone('', ''), 'cnpj');
 
+    // Iniciando Testes
     beforeEach(() => {
         TestBed.configureTestingModule({
             providers: [AppService, ClienteService]
@@ -22,24 +23,25 @@ describe('BookService', () => {
         expect(service).toBeTruthy();
     }));
 
+    // Testando servico de listar Clientes
     describe('#list()', () => {
 
-        it('should return an empty array by default', inject([ClienteService], (service: ClienteService) => {
+        it('deve retornar uma matriz vazia por padrão', inject([ClienteService], (service: ClienteService) => {
             expect(service.list()).toEqual([]);
         }));
 
 
-        it('should return all books', inject([ClienteService], (service: ClienteService) => {
-
+        it('deve retornar todos os clientes', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             service.add(cliente2);
             expect(service.list()).toEqual([cliente1, cliente2]);
         }));
     });
 
+    // Testando salvar Cliente
     describe('#save(book)', () => {
 
-        it('should automatically assign an incrementing id', inject([ClienteService], (service: ClienteService) => {
+        it('deve atribuir automaticamente um ID de incremento', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             service.add(cliente2);
             expect(service.getById(1)).toEqual(cliente1);
@@ -47,10 +49,9 @@ describe('BookService', () => {
         }));
     });
 
-
+    // Testando deletar Cliente
     describe('#delete(id)', () => {
-
-        it('should remove book with the corresponding id', inject([ClienteService], (service: ClienteService) => {
+        it('deve remover o cliente com o ID correspondente', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             service.add(cliente2);
             expect(service.list()).toEqual([cliente1, cliente2]);
@@ -60,7 +61,7 @@ describe('BookService', () => {
             expect(service.list()).toEqual([]);
         }));
 
-        it('should not removing anything if todo with corresponding id is not found', inject([ClienteService], (service: ClienteService) => {
+        it('não deve remover nada se não for encontrado todo com o ID correspondente', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             service.add(cliente2);
             expect(service.list()).toEqual([cliente1, cliente2]);
@@ -69,9 +70,9 @@ describe('BookService', () => {
         }));
     });
 
+    // Testando atualizar Cliente
     describe('#update(book)', () => {
-
-        it('should return book with the corresponding id and updated data', inject([ClienteService], (service: ClienteService) => {
+        it('deve retornar o cliente com o ID correspondente e os dados atualizados', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             cliente2.id = cliente1.id;
             const updated = service.update(cliente2);
@@ -79,7 +80,7 @@ describe('BookService', () => {
             expect(updated.id).toEqual('cnpj');
         }));
 
-        it('should return null if todo is not found', inject([ClienteService], (service: ClienteService) => {
+        it('deve retornar null se todo não for encontrado', inject([ClienteService], (service: ClienteService) => {
             service.add(cliente1);
             cliente2.id = 3;
             const updated = service.update(cliente2);
