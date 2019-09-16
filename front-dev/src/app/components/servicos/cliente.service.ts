@@ -14,10 +14,10 @@ export class ClienteService {
     listaDeClientes: Cliente[] = [];
 
     constructor(private appService: AppService) {
-        for(let cli of LOCADORES){
+        for (let cli of LOCADORES) {
             this.listaDeClientes.push(cli)
         }
-        for(let cli of LOCATARIOS){
+        for (let cli of LOCATARIOS) {
             this.listaDeClientes.push(cli)
         }
     }

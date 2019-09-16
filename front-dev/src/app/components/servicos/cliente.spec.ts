@@ -11,9 +11,9 @@ describe('Cliente', () => {
     });
     it('should accept values in the constructor', () => {
         let cliente = new Locatario('Eduardo Carreira', '', '', '', 'false', new Endereco('', '', '', ''), new Telefone('', ''), 'cnpj');
-        
+
         expect(cliente.nome).toEqual('Eduardo Carreira');
-        expect(cliente.cadastroPessoa).toEqual('cnpj');
+        expect(cliente.cnpj).toEqual('cnpj');
         expect(cliente.id).toBeUndefined();
     });
 });
