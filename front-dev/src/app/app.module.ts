@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/telas/login/login.component';
 import { SidebarComponent } from './components/telas/sidebar/sidebar.component';
 import { NavbarComponent } from './components/telas/navbar/navbar.component';
+import { NavbarFiltroComponent } from './components/telas/navbar-filtro/navbar-filtro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SidebarComponent,
-    NavbarComponent
+    NavbarComponent,
+    NavbarFiltroComponent,
   ],
   imports: [
     BrowserModule,

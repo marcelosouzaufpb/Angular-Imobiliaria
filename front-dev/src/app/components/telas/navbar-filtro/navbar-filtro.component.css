@@ -1,0 +1,50 @@
+/* Navbar Styles */
+
+.navbar {
+    z-index: 1;
+    background: yellowgreen;
+    height: 75px;
+}
+
+.navbar .input-group {
+    width: 70%;
+    height: 60px;
+}
+
+
+.input-group-text {
+    background: #ffffff;
+    border-radius: 0;
+    border: none;
+    color: darkgreen;
+    font-size: 20px;
+}
+
+.form-control {
+    height: 60px;
+    border-radius: 0;
+    border: none;
+}
+
+.form-control::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color:  darkgreen;
+}
+.nav {
+    width: 30%;
+}
+.nav-item {
+    width: 100%;
+    padding: 9px;
+    border: 2px solid white;
+    color: white;
+    font-size: 100%;
+    text-align: center;
+    
+}
